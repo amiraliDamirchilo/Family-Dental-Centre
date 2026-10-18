@@ -1,0 +1,918 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Family Dental Centre | Comprehensive Dental Care in Sharjah, UAE</title>
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        fdc: {
+                            navy: '#0A2540',
+                            navyLight: '#14385C',
+                            teal: '#00A896',
+                            tealHover: '#008F80',
+                            mint: '#E8F6F5',
+                            sand: '#F7F4EF',
+                            sandDark: '#EFEAE2',
+                            textDark: '#1E293B',
+                            textMuted: '#64748B'
+                        }
+                    },
+                    fontFamily: {
+                        heading: ['Outfit', 'sans-serif'],
+                        body: ['Plus Jakarta Sans', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #FAFAF8;
+            color: #1E293B;
+        }
+
+        .font-heading {
+            font-family: 'Outfit', sans-serif;
+        }
+
+        /* Subtle humanized UI enhancements */
+        .clinic-card {
+            background: #FFFFFF;
+            border: 1px solid rgba(0, 168, 150, 0.12);
+            transition: all 0.3s ease;
+        }
+
+        .clinic-card:hover {
+            border-color: rgba(0, 168, 150, 0.4);
+            box-shadow: 0 12px 30px -10px rgba(10, 37, 64, 0.08);
+            transform: translateY(-2px);
+        }
+
+        .btn-teal {
+            background-color: #00A896;
+            color: #FFFFFF;
+            transition: all 0.25s ease;
+        }
+
+        .btn-teal:hover {
+            background-color: #008F80;
+            box-shadow: 0 6px 18px rgba(0, 168, 150, 0.3);
+        }
+
+        .btn-navy {
+            background-color: #0A2540;
+            color: #FFFFFF;
+            transition: all 0.25s ease;
+        }
+
+        .btn-navy:hover {
+            background-color: #14385C;
+            box-shadow: 0 6px 18px rgba(10, 37, 64, 0.25);
+        }
+
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #F7F4EF;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #00A896;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body class="antialiased selection:bg-fdc-teal selection:text-white">
+
+    <!-- Emergency & Direct Phone Top Bar -->
+    <div class="bg-fdc-navy text-white text-xs py-2.5 px-4 border-b border-fdc-teal/20">
+        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-2">
+            <div class="flex items-center gap-4 text-slate-300">
+                <span><i class="fa-solid fa-location-dot text-fdc-teal mr-1.5"></i> King Faisal Street, Al Qasimia, Sharjah, UAE</span>
+                <span class="hidden md:inline text-slate-500">|</span>
+                <span class="hidden md:inline"><i class="fa-solid fa-clock text-fdc-teal mr-1.5"></i> Sat – Thu: 9:00 AM – 9:00 PM</span>
+            </div>
+            <div class="flex items-center gap-4 font-medium">
+                <a href="tel:+97165734444" class="hover:text-fdc-teal transition-colors flex items-center gap-1.5">
+                    <i class="fa-solid fa-phone text-fdc-teal"></i>
+                    <span>+971 6 573 4444</span>
+                </a>
+                <a href="https://wa.me/971506734444" target="_blank" class="bg-emerald-600 hover:bg-emerald-700 text-white px-2.5 py-0.5 rounded-full text-[11px] font-semibold transition-colors flex items-center gap-1">
+                    <i class="fa-brands fa-whatsapp"></i> WhatsApp
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header / Navbar -->
+    <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-slate-200/80 transition-all">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 h-20 flex items-center justify-between">
+            
+            <!-- Brand Logo -->
+            <a href="#" class="flex items-center gap-3">
+                <div class="w-11 h-11 rounded-2xl bg-fdc-teal flex items-center justify-center text-white shadow-md shadow-fdc-teal/20">
+                    <i class="fa-solid fa-tooth text-2xl"></i>
+                </div>
+                <div>
+                    <span class="font-heading text-xl font-bold text-fdc-navy block leading-none tracking-tight">
+                        FAMILY DENTAL <span class="text-fdc-teal font-normal">CENTRE</span>
+                    </span>
+                    <span class="text-[10px] font-semibold uppercase tracking-widest text-fdc-textMuted block mt-1">
+                        Sharjah • Dental Excellence Since 2008
+                    </span>
+                </div>
+            </a>
+
+            <!-- Desktop Nav Links -->
+            <nav class="hidden lg:flex items-center gap-8 text-xs font-semibold uppercase tracking-wider text-fdc-navy">
+                <a href="#about" class="hover:text-fdc-teal transition-colors">About Center</a>
+                <a href="#treatments" class="hover:text-fdc-teal transition-colors">Treatments</a>
+                <a href="#why-us" class="hover:text-fdc-teal transition-colors">Why Families Choose Us</a>
+                <a href="#reviews" class="hover:text-fdc-teal transition-colors">Patient Stories</a>
+                <a href="#doctors" class="hover:text-fdc-teal transition-colors">Our Doctors</a>
+                <a href="#contact" class="hover:text-fdc-teal transition-colors">Contact & Location</a>
+            </nav>
+
+            <!-- CTA Button -->
+            <div class="hidden sm:flex items-center gap-3">
+                <a href="#contact" class="btn-teal px-5 py-2.5 rounded-xl font-semibold text-xs uppercase tracking-wider shadow-sm flex items-center gap-2">
+                    <i class="fa-regular fa-calendar-check"></i>
+                    <span>Book Consultation</span>
+                </a>
+            </div>
+
+            <!-- Mobile Drawer Toggle -->
+            <button id="menu-toggle" class="lg:hidden p-2 rounded-lg bg-fdc-sand text-fdc-navy hover:text-fdc-teal focus:outline-none">
+                <i class="fa-solid fa-bars-staggered text-xl"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-white border-b border-slate-200 px-6 py-6 space-y-4">
+            <a href="#about" class="block text-sm font-semibold text-fdc-navy uppercase tracking-wider">About Center</a>
+            <a href="#treatments" class="block text-sm font-semibold text-fdc-navy uppercase tracking-wider">Treatments & Services</a>
+            <a href="#why-us" class="block text-sm font-semibold text-fdc-navy uppercase tracking-wider">Why Choose Us</a>
+            <a href="#reviews" class="block text-sm font-semibold text-fdc-navy uppercase tracking-wider">Patient Reviews</a>
+            <a href="#doctors" class="block text-sm font-semibold text-fdc-navy uppercase tracking-wider">Our Dentists</a>
+            <a href="#contact" class="block text-sm font-semibold text-fdc-navy uppercase tracking-wider">Contact & Booking</a>
+            <div class="pt-3 border-t border-slate-100">
+                <a href="tel:+97165734444" class="block text-center w-full py-3 rounded-xl btn-teal font-semibold text-xs uppercase tracking-wider">
+                    Call Center: +971 6 573 4444
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- SECTION 1: HERO SECTION -->
+    <section class="relative py-16 lg:py-24 bg-gradient-to-b from-fdc-mint/60 via-white to-fdc-sand/40 border-b border-slate-200/60 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            
+            <!-- Left Text Content -->
+            <div class="lg:col-span-7 space-y-7">
+                <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-fdc-teal/30 text-fdc-navy text-xs font-semibold shadow-sm">
+                    <span class="w-2.5 h-2.5 rounded-full bg-fdc-teal"></span>
+                    Trusted Family Dental Practice in Al Qasimia, Sharjah
+                </div>
+
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-heading font-bold text-fdc-navy leading-[1.12]">
+                    Gentle, Comprehensive <br>
+                    <span class="text-fdc-teal italic">Dental Care</span> for Your Whole Family
+                </h1>
+
+                <p class="text-sm sm:text-base text-fdc-textMuted max-w-xl leading-relaxed">
+                    From pediatric checkups and pain-free root canals to invisible aligners and Hollywood smile restorations. Experience compassionate dentistry with state-of-the-art technology in Sharjah.
+                </p>
+
+                <div class="flex flex-wrap items-center gap-4 pt-2">
+                    <a href="#contact" class="btn-teal px-7 py-3.5 rounded-xl font-semibold text-xs uppercase tracking-wider shadow-md flex items-center gap-2">
+                        <i class="fa-solid fa-calendar-day"></i>
+                        <span>Book Your Visit</span>
+                    </a>
+                    <a href="#treatments" class="px-7 py-3.5 rounded-xl bg-white border border-slate-300 text-fdc-navy font-semibold text-xs uppercase tracking-wider hover:bg-fdc-sand transition-colors flex items-center gap-2">
+                        <span>Explore Treatments</span>
+                        <i class="fa-solid fa-arrow-right text-fdc-teal"></i>
+                    </a>
+                </div>
+
+                <!-- Trust Badges -->
+                <div class="pt-8 grid grid-cols-3 gap-4 border-t border-slate-200">
+                    <div>
+                        <span class="block font-heading text-2xl sm:text-3xl font-bold text-fdc-navy">15+ Years</span>
+                        <span class="text-[11px] text-fdc-textMuted font-medium uppercase tracking-wider">Serving Sharjah</span>
+                    </div>
+                    <div>
+                        <span class="block font-heading text-2xl sm:text-3xl font-bold text-fdc-navy">18,000+</span>
+                        <span class="text-[11px] text-fdc-textMuted font-medium uppercase tracking-wider">Happy Patients</span>
+                    </div>
+                    <div>
+                        <span class="block font-heading text-2xl sm:text-3xl font-bold text-fdc-navy">4.8 ★</span>
+                        <span class="text-[11px] text-fdc-textMuted font-medium uppercase tracking-wider">Google Rating</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Hero Visual Card -->
+            <div class="lg:col-span-5">
+                <div class="relative max-w-md mx-auto lg:max-w-none">
+                    <div class="bg-white p-6 rounded-3xl border border-fdc-teal/20 shadow-xl space-y-5">
+                        <div class="relative h-64 sm:h-72 rounded-2xl overflow-hidden bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&q=80&w=800');">
+                            <div class="absolute inset-0 bg-gradient-to-t from-fdc-navy/80 via-transparent to-transparent"></div>
+                            <div class="absolute bottom-4 left-4 right-4 text-white">
+                                <span class="bg-fdc-teal text-white text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full">
+                                    Patient-Centric Care
+                                </span>
+                                <h3 class="font-heading text-xl font-bold mt-2">Zero-Pain Dental Philosophy</h3>
+                                <p class="text-xs text-slate-200 font-light">Gentle techniques designed for anxious patients & kids</p>
+                            </div>
+                        </div>
+
+                        <!-- Mini Highlights Box -->
+                        <div class="grid grid-cols-2 gap-3">
+                            <div class="p-3.5 rounded-xl bg-fdc-mint/70 border border-fdc-teal/20 flex items-center gap-3">
+                                <i class="fa-solid fa-child text-fdc-teal text-xl"></i>
+                                <div>
+                                    <h4 class="text-xs font-bold text-fdc-navy">Pediatric Care</h4>
+                                    <span class="text-[10px] text-fdc-textMuted">Kid-Friendly Dental</span>
+                                </div>
+                            </div>
+                            <div class="p-3.5 rounded-xl bg-fdc-mint/70 border border-fdc-teal/20 flex items-center gap-3">
+                                <i class="fa-solid fa-wand-magic-sparkles text-fdc-teal text-xl"></i>
+                                <div>
+                                    <h4 class="text-xs font-bold text-fdc-navy">Teeth Whitening</h4>
+                                    <span class="text-[10px] text-fdc-textMuted">Same Day Results</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SECTION 2: ABOUT CLINIC PHILOSOPHY -->
+    <section id="about" class="py-20 bg-white border-b border-slate-200/60">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <div class="lg:col-span-6 space-y-6">
+                    <span class="text-fdc-teal text-xs font-bold uppercase tracking-widest bg-fdc-mint px-3.5 py-1.5 rounded-full border border-fdc-teal/20">
+                        About Family Dental Centre
+                    </span>
+
+                    <h2 class="text-3xl sm:text-4xl font-heading font-bold text-fdc-navy leading-tight">
+                        Your Family’s Oral Health is in Caring, Professional Hands
+                    </h2>
+
+                    <p class="text-sm sm:text-base text-fdc-textMuted leading-relaxed">
+                        Established in the heart of Sharjah, <strong class="text-fdc-navy">Family Dental Centre</strong> was created with a clear vision: to offer high-quality, compassionate, and transparent dental treatments under one roof for parents, children, and seniors alike.
+                    </p>
+
+                    <p class="text-sm sm:text-base text-fdc-textMuted leading-relaxed">
+                        We prioritize strict hospital-grade sterilization protocols, low-radiation digital X-rays, and clear treatment plans so you always feel informed, safe, and comfortable.
+                    </p>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-2">
+                        <div class="p-4 rounded-2xl bg-fdc-sand border border-slate-200 space-y-2">
+                            <i class="fa-solid fa-pump-medical text-fdc-teal text-xl"></i>
+                            <h4 class="font-bold text-xs text-fdc-navy">Class-B Sterilization</h4>
+                            <p class="text-[11px] text-fdc-textMuted leading-normal">Autoclave equipment ensuring 100% hygienic safety.</p>
+                        </div>
+
+                        <div class="p-4 rounded-2xl bg-fdc-sand border border-slate-200 space-y-2">
+                            <i class="fa-solid fa-microscope text-fdc-teal text-xl"></i>
+                            <h4 class="font-bold text-xs text-fdc-navy">Digital X-Rays</h4>
+                            <p class="text-[11px] text-fdc-textMuted leading-normal">Low radiation diagnostic imaging for fast results.</p>
+                        </div>
+
+                        <div class="p-4 rounded-2xl bg-fdc-sand border border-slate-200 space-y-2">
+                            <i class="fa-solid fa-handshake-angle text-fdc-teal text-xl"></i>
+                            <h4 class="font-bold text-xs text-fdc-navy">Multi-lingual Staff</h4>
+                            <p class="text-[11px] text-fdc-textMuted leading-normal">Consultation in Arabic, English, Urdu & Hindi.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-6">
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="space-y-4">
+                            <div class="h-56 sm:h-64 rounded-2xl overflow-hidden bg-cover bg-center border border-slate-200 shadow-sm" style="background-image: url('https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&q=80&w=800');"></div>
+                            <div class="p-5 rounded-2xl bg-fdc-navy text-white text-center space-y-1">
+                                <span class="font-heading text-2xl font-bold text-fdc-teal">Al Qasimia</span>
+                                <span class="text-[11px] text-slate-300 block uppercase tracking-wider">Sharjah Prime Location</span>
+                            </div>
+                        </div>
+                        <div class="space-y-4 pt-6">
+                            <div class="p-5 rounded-2xl bg-fdc-mint text-fdc-navy text-center space-y-1 border border-fdc-teal/30">
+                                <i class="fa-solid fa-heart-pulse text-fdc-teal text-xl mb-1"></i>
+                                <span class="font-heading text-xl font-bold block text-fdc-navy">Gentle & Caring</span>
+                                <span class="text-[10px] text-fdc-textMuted block uppercase tracking-wider">No Rush Dentistry</span>
+                            </div>
+                            <div class="h-56 sm:h-64 rounded-2xl overflow-hidden bg-cover bg-center border border-slate-200 shadow-sm" style="background-image: url('https://images.unsplash.com/photo-1606811841689-23dfddce3e95?auto=format&fit=crop&q=80&w=800');"></div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 3: INTERACTIVE TREATMENTS & SPECIALTIES -->
+    <section id="treatments" class="py-20 bg-fdc-sand/60 border-b border-slate-200/60">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6">
+            
+            <div class="text-center max-w-2xl mx-auto mb-12 space-y-3">
+                <span class="text-fdc-teal text-xs font-bold uppercase tracking-widest bg-white px-3.5 py-1.5 rounded-full border border-fdc-teal/20">
+                    Comprehensive Menu
+                </span>
+                <h2 class="text-3xl sm:text-5xl font-heading font-bold text-fdc-navy">Dental Treatments & Services</h2>
+                <p class="text-fdc-textMuted text-xs sm:text-sm">Click through categories to explore our tailored clinical dental solutions.</p>
+            </div>
+
+            <!-- Category Tab Navigation -->
+            <div class="flex flex-wrap justify-center gap-2 mb-10" id="treatment-tabs">
+                <button onclick="switchTab('pediatric')" id="tab-pediatric" class="tab-btn active-tab px-5 py-2.5 rounded-xl font-semibold text-xs tracking-wider uppercase border transition-all bg-fdc-teal text-white border-fdc-teal shadow-sm">
+                    <i class="fa-solid fa-child mr-1.5"></i> Pediatric Care
+                </button>
+                <button onclick="switchTab('ortho')" id="tab-ortho" class="tab-btn px-5 py-2.5 rounded-xl font-semibold text-xs tracking-wider uppercase border transition-all bg-white text-fdc-navy border-slate-200 hover:border-fdc-teal">
+                    <i class="fa-solid fa-teeth mr-1.5"></i> Braces & Aligners
+                </button>
+                <button onclick="switchTab('cosmetic')" id="tab-cosmetic" class="tab-btn px-5 py-2.5 rounded-xl font-semibold text-xs tracking-wider uppercase border transition-all bg-white text-fdc-navy border-slate-200 hover:border-fdc-teal">
+                    <i class="fa-solid fa-sparkles mr-1.5"></i> Cosmetic & Whitening
+                </button>
+                <button onclick="switchTab('restorative')" id="tab-restorative" class="tab-btn px-5 py-2.5 rounded-xl font-semibold text-xs tracking-wider uppercase border transition-all bg-white text-fdc-navy border-slate-200 hover:border-fdc-teal">
+                    <i class="fa-solid fa-tooth mr-1.5"></i> Root Canal & Crowns
+                </button>
+                <button onclick="switchTab('hygiene')" id="tab-hygiene" class="tab-btn px-5 py-2.5 rounded-xl font-semibold text-xs tracking-wider uppercase border transition-all bg-white text-fdc-navy border-slate-200 hover:border-fdc-teal">
+                    <i class="fa-solid fa-shield-halved mr-1.5"></i> Cleaning & Hygiene
+                </button>
+            </div>
+
+            <!-- Dynamic Tab Content Containers -->
+            <div id="tab-contents">
+                
+                <!-- Pediatric Dentistry -->
+                <div id="content-pediatric" class="tab-panel grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="clinic-card rounded-2xl p-6 flex flex-col justify-between space-y-4">
+                        <div class="space-y-3">
+                            <div class="w-10 h-10 rounded-xl bg-fdc-mint text-fdc-teal flex items-center justify-center font-bold">01</div>
+                            <h3 class="font-heading text-xl font-bold text-fdc-navy">First Dental Visit & Checkups</h3>
+                            <p class="text-xs text-fdc-textMuted leading-relaxed">Gentle introduction for young children to build positive, anxiety-free habits early in life.</p>
+                        </div>
+                        <div class="pt-3 border-t border-slate-100 flex justify-between text-[11px] text-fdc-teal font-semibold">
+                            <span>Duration: 30 Mins</span>
+                            <span>Kids Friendly</span>
+                        </div>
+                    </div>
+
+                    <div class="clinic-card rounded-2xl p-6 flex flex-col justify-between space-y-4">
+                        <div class="space-y-3">
+                            <div class="w-10 h-10 rounded-xl bg-fdc-mint text-fdc-teal flex items-center justify-center font-bold">02</div>
+                            <h3 class="font-heading text-xl font-bold text-fdc-navy">Fluoride Varnish & Sealants</h3>
+                            <p class="text-xs text-fdc-textMuted leading-relaxed">Protective coatings applied to deep molars to prevent cavities and strengthen developing enamel.</p>
+                        </div>
+                        <div class="pt-3 border-t border-slate-100 flex justify-between text-[11px] text-fdc-teal font-semibold">
+                            <span>Preventive Care</span>
+                            <span>Painless</span>
+                        </div>
+                    </div>
+
+                    <div class="clinic-card rounded-2xl p-6 flex flex-col justify-between space-y-4">
+                        <div class="space-y-3">
+                            <div class="w-10 h-10 rounded-xl bg-fdc-mint text-fdc-teal flex items-center justify-center font-bold">03</div>
+                            <h3 class="font-heading text-xl font-bold text-fdc-navy">Pediatric Pulpotomy & Space Maintainers</h3>
+                            <p class="text-xs text-fdc-textMuted leading-relaxed">Specialized baby tooth treatments to relieve toothaches and reserve room for permanent teeth.</p>
+                        </div>
+                        <div class="pt-3 border-t border-slate-100 flex justify-between text-[11px] text-fdc-teal font-semibold">
+                            <span>Specialized</span>
+                            <span>High Comfort</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Braces & Aligners -->
+                <div id="content-ortho" class="tab-panel hidden grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="clinic-card rounded-2xl p-6 flex flex-col justify-between space-y-4">
+                        <div class="space-y-3">
+                            <div class="w-10 h-10 rounded-xl bg-fdc-mint text-fdc-teal flex items-center justify-center font-bold">01</div>
+                            <h3 class="font-heading text-xl font-bold text-fdc-navy">Metal & Ceramic Braces</h3>
+                            <p class="text-xs text-fdc-textMuted leading-relaxed">Traditional and tooth-colored ceramic brackets to align teeth and correct bite issues for teens and adults.</p>
+                        </div>
+                        <div class="pt-3 border-t border-slate-100 flex justify-between text-[11px] text-fdc-teal font-semibold">
+                            <span>Monthly Adjustments</span>
+                            <span>Effective</span>
+                        </div>
+                    </div>
+
+                    <div class="clinic-card rounded-2xl p-6 flex flex-col justify-between space-y-4">
+                        <div class="space-y-3">
+                            <div class="w-10 h-10 rounded-xl bg-fdc-mint text-fdc-teal flex items-center justify-center font-bold">02</div>
+                            <h3 class="font-heading text-xl font-bold text-fdc-navy">Clear Invisible Aligners</h3>
+                            <p class="text-xs text-fdc-textMuted leading-relaxed">Removable, transparent aligners custom 3D-designed for discreet teeth straightening without wires.</p>
+                        </div>
+                        <div class="pt-3 border-t border-slate-100 flex justify-between text-[11px] text-fdc-teal font-semibold">
+                            <span>Discreet</span>
+                            <span>Easy Cleaning</span>
+                        </div>
+                    </div>
+
+                    <div class="clinic-card rounded-2xl p-6 flex flex-col justify-between space-y-4">
+                        <div class="space-y-3">
+                            <div class="w-10 h-10 rounded-xl bg-fdc-mint text-fdc-teal flex items-center justify-center font-bold">03</div>
+                            <h3 class="font-heading text-xl font-bold text-fdc-navy">Retainers & Habit Appliances</h3>
+                            <p class="text-xs text-fdc-textMuted leading-relaxed">Custom post-treatment retainers to ensure your newly aligned smile stays straight permanently.</p>
+                        </div>
+                        <div class="pt-3 border-t border-slate-100 flex justify-between text-[11px] text-fdc-teal font-semibold">
+                            <span>Long-term Retention</span>
+                            <span>Custom Fit</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cosmetic Dentistry -->
+                <div id="content-cosmetic" class="tab-panel hidden grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="clinic-card rounded-2xl p-6 flex flex-col justify-between space-y-4">
+                        <div class="space-y-3">
+                            <div class="w-10 h-10 rounded-xl bg-fdc-mint text-fdc-teal flex items-center justify-center font-bold">01</div>
+                            <h3 class="font-heading text-xl font-bold text-fdc-navy">In-Office Teeth Whitening</h3>
+                            <p class="text-xs text-fdc-textMuted leading-relaxed">Brighten stained teeth up to 6-8 shades lighter in just 45 minutes using safe, professional gel technology.</p>
+                        </div>
+                        <div class="pt-3 border-t border-slate-100 flex justify-between text-[11px] text-fdc-teal font-semibold">
+                            <span>Immediate Results</span>
+                            <span>Safe Enamel</span>
+                        </div>
+                    </div>
+
+                    <div class="clinic-card rounded-2xl p-6 flex flex-col justify-between space-y-4">
+                        <div class="space-y-3">
+                            <div class="w-10 h-10 rounded-xl bg-fdc-mint text-fdc-teal flex items-center justify-center font-bold">02</div>
+                            <h3 class="font-heading text-xl font-bold text-fdc-navy">Porcelain Veneers</h3>
+                            <p class="text-xs text-fdc-textMuted leading-relaxed">Ultra-thin porcelain shells crafted to transform chipped, discolored, or unevenly spaced teeth.</p>
+                        </div>
+                        <div class="pt-3 border-t border-slate-100 flex justify-between text-[11px] text-fdc-teal font-semibold">
+                            <span>Smile Makeover</span>
+                            <span>Durable</span>
+                        </div>
+                    </div>
+
+                    <div class="clinic-card rounded-2xl p-6 flex flex-col justify-between space-y-4">
+                        <div class="space-y-3">
+                            <div class="w-10 h-10 rounded-xl bg-fdc-mint text-fdc-teal flex items-center justify-center font-bold">03</div>
+                            <h3 class="font-heading text-xl font-bold text-fdc-navy">Composite Bonding & Shaping</h3>
+                            <p class="text-xs text-fdc-textMuted leading-relaxed">Affordable, single-visit tooth restructuring for small gaps, cracks, or worn edges.</p>
+                        </div>
+                        <div class="pt-3 border-t border-slate-100 flex justify-between text-[11px] text-fdc-teal font-semibold">
+                            <span>Single Session</span>
+                            <span>Natural Look</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Root Canal & Restorative -->
+                <div id="content-restorative" class="tab-panel hidden grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="clinic-card rounded-2xl p-6 flex flex-col justify-between space-y-4">
+                        <div class="space-y-3">
+                            <div class="w-10 h-10 rounded-xl bg-fdc-mint text-fdc-teal flex items-center justify-center font-bold">01</div>
+                            <h3 class="font-heading text-xl font-bold text-fdc-navy">Pain-Free Root Canal (Endodontics)</h3>
+                            <p class="text-xs text-fdc-textMuted leading-relaxed">Save infected teeth using modern local anesthesia and rotary canal cleaning for a smooth experience.</p>
+                        </div>
+                        <div class="pt-3 border-t border-slate-100 flex justify-between text-[11px] text-fdc-teal font-semibold">
+                            <span>Relieves Toothache</span>
+                            <span>Tooth Preservation</span>
+                        </div>
+                    </div>
+
+                    <div class="clinic-card rounded-2xl p-6 flex flex-col justify-between space-y-4">
+                        <div class="space-y-3">
+                            <div class="w-10 h-10 rounded-xl bg-fdc-mint text-fdc-teal flex items-center justify-center font-bold">02</div>
+                            <h3 class="font-heading text-xl font-bold text-fdc-navy">Zirconia Crowns & Bridges</h3>
+                            <p class="text-xs text-fdc-textMuted leading-relaxed">Strong, metal-free aesthetic crowns designed to protect weakened teeth and restore chewing function.</p>
+                        </div>
+                        <div class="pt-3 border-t border-slate-100 flex justify-between text-[11px] text-fdc-teal font-semibold">
+                            <span>High Strength</span>
+                            <span>Biocompatible</span>
+                        </div>
+                    </div>
+
+                    <div class="clinic-card rounded-2xl p-6 flex flex-col justify-between space-y-4">
+                        <div class="space-y-3">
+                            <div class="w-10 h-10 rounded-xl bg-fdc-mint text-fdc-teal flex items-center justify-center font-bold">03</div>
+                            <h3 class="font-heading text-xl font-bold text-fdc-navy">Tooth Fillings & Restorations</h3>
+                            <p class="text-xs text-fdc-textMuted leading-relaxed">Tooth-colored resin fillings that seamlessly match your natural shade and seal out decay.</p>
+                        </div>
+                        <div class="pt-3 border-t border-slate-100 flex justify-between text-[11px] text-fdc-teal font-semibold">
+                            <span>Seamless Match</span>
+                            <span>Quick Procedure</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cleaning & Hygiene -->
+                <div id="content-hygiene" class="tab-panel hidden grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="clinic-card rounded-2xl p-6 flex flex-col justify-between space-y-4">
+                        <div class="space-y-3">
+                            <div class="w-10 h-10 rounded-xl bg-fdc-mint text-fdc-teal flex items-center justify-center font-bold">01</div>
+                            <h3 class="font-heading text-xl font-bold text-fdc-navy">Scaling & Ultrasonic Polishing</h3>
+                            <p class="text-xs text-fdc-textMuted leading-relaxed">Removes stubborn tartar, plaque buildup, and surface stains to maintain healthy gums and fresh breath.</p>
+                        </div>
+                        <div class="pt-3 border-t border-slate-100 flex justify-between text-[11px] text-fdc-teal font-semibold">
+                            <span>Recommended 6 Months</span>
+                            <span>Essential Hygiene</span>
+                        </div>
+                    </div>
+
+                    <div class="clinic-card rounded-2xl p-6 flex flex-col justify-between space-y-4">
+                        <div class="space-y-3">
+                            <div class="w-10 h-10 rounded-xl bg-fdc-mint text-fdc-teal flex items-center justify-center font-bold">02</div>
+                            <h3 class="font-heading text-xl font-bold text-fdc-navy">Deep Periodontal Gum Treatment</h3>
+                            <p class="text-xs text-fdc-textMuted leading-relaxed">Root planing and specialized treatment for bleeding gums, gingivitis, and early periodontitis.</p>
+                        </div>
+                        <div class="pt-3 border-t border-slate-100 flex justify-between text-[11px] text-fdc-teal font-semibold">
+                            <span>Gum Health</span>
+                            <span>Prevents Tooth Loss</span>
+                        </div>
+                    </div>
+
+                    <div class="clinic-card rounded-2xl p-6 flex flex-col justify-between space-y-4">
+                        <div class="space-y-3">
+                            <div class="w-10 h-10 rounded-xl bg-fdc-mint text-fdc-teal flex items-center justify-center font-bold">03</div>
+                            <h3 class="font-heading text-xl font-bold text-fdc-navy">Night Guards & Mouth Protectors</h3>
+                            <p class="text-xs text-fdc-textMuted leading-relaxed">Custom fitted night guards for patients suffering from teeth grinding (bruxism) and jaw tightness.</p>
+                        </div>
+                        <div class="pt-3 border-t border-slate-100 flex justify-between text-[11px] text-fdc-teal font-semibold">
+                            <span>Custom Molded</span>
+                            <span>Prevents Wear</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 4: WHY SHARJAH FAMILIES CHOOSE US -->
+    <section id="why-us" class="py-20 bg-fdc-navy text-white relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <div class="lg:col-span-6 space-y-6">
+                    <span class="text-fdc-teal text-xs font-bold uppercase tracking-widest border border-fdc-teal/30 px-3.5 py-1 rounded-full bg-fdc-navyLight">
+                        The Family Dental Standard
+                    </span>
+
+                    <h2 class="text-3xl sm:text-5xl font-heading font-bold text-white leading-tight">
+                        Why Families in Sharjah Trust Us with Their Smiles
+                    </h2>
+
+                    <p class="text-sm sm:text-base text-slate-300 leading-relaxed font-light">
+                        We know visiting the dentist can feel daunting. That’s why we’ve built our entire clinic experience around genuine patient comfort, open communication, and fair pricing.
+                    </p>
+
+                    <div class="space-y-4 pt-2">
+                        <div class="flex items-start gap-3">
+                            <div class="w-7 h-7 rounded-full bg-fdc-teal/20 text-fdc-teal flex items-center justify-center shrink-0 border border-fdc-teal/40 mt-1">
+                                <i class="fa-solid fa-check text-xs"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-sm text-white">Transparent & Honest Treatment Plans</h4>
+                                <p class="text-xs text-slate-300 font-light">No unnecessary procedures. We explain options clearly with no hidden costs.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-3">
+                            <div class="w-7 h-7 rounded-full bg-fdc-teal/20 text-fdc-teal flex items-center justify-center shrink-0 border border-fdc-teal/40 mt-1">
+                                <i class="fa-solid fa-check text-xs"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-sm text-white">Kid-Friendly & Patient Centric Environment</h4>
+                                <p class="text-xs text-slate-300 font-light">Warm staff who take the extra time to comfort nervous children and anxious adults.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-3">
+                            <div class="w-7 h-7 rounded-full bg-fdc-teal/20 text-fdc-teal flex items-center justify-center shrink-0 border border-fdc-teal/40 mt-1">
+                                <i class="fa-solid fa-check text-xs"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-sm text-white">Convenient Sharjah Location & Easy Parking</h4>
+                                <p class="text-xs text-slate-300 font-light">Located on King Faisal Street, Al Qasimia with accessible parking nearby.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="pt-4">
+                        <a href="tel:+97165734444" class="inline-flex items-center gap-2 btn-teal px-7 py-3.5 rounded-xl font-semibold text-xs uppercase tracking-wider">
+                            <i class="fa-solid fa-phone"></i>
+                            <span>Call Clinic Desk</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-6">
+                    <div class="bg-fdc-navyLight p-6 sm:p-8 rounded-3xl border border-fdc-teal/20 space-y-6">
+                        <h3 class="font-heading text-2xl font-bold text-white">Emergency Dental Care in Sharjah</h3>
+                        <p class="text-xs text-slate-300 leading-relaxed font-light">
+                            Suffering from sudden severe toothache, broken filling, or dental trauma? We prioritize same-day emergency appointments to relieve your pain quickly.
+                        </p>
+
+                        <div class="p-4 rounded-2xl bg-fdc-navy border border-red-500/30 flex items-center gap-4">
+                            <div class="w-12 h-12 rounded-xl bg-red-500/20 text-red-400 flex items-center justify-center shrink-0 text-xl">
+                                <i class="fa-solid fa-kit-medical"></i>
+                            </div>
+                            <div>
+                                <strong class="text-white text-sm block font-bold">Same-Day Emergency Service</strong>
+                                <span class="text-xs text-slate-300 font-light">Call immediately for priority slot</span>
+                            </div>
+                        </div>
+
+                        <div class="pt-2 flex justify-between items-center text-xs text-slate-300">
+                            <span><i class="fa-solid fa-clock text-fdc-teal mr-1"></i> Quick Response Time</span>
+                            <a href="tel:+97165734444" class="text-fdc-teal underline font-bold hover:text-white">Emergency Line</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 5: REAL PATIENT REVIEWS -->
+    <section id="reviews" class="py-20 bg-white border-b border-slate-200/60">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6">
+            
+            <div class="text-center max-w-2xl mx-auto mb-14 space-y-3">
+                <span class="text-fdc-teal text-xs font-bold uppercase tracking-widest bg-fdc-mint px-3.5 py-1.5 rounded-full border border-fdc-teal/20">
+                    4.8 ★ Verified Patient Feedback
+                </span>
+                <h2 class="text-3xl sm:text-5xl font-heading font-bold text-fdc-navy">What Our Patients Say</h2>
+                <p class="text-fdc-textMuted text-xs sm:text-sm">Real stories from residents across Sharjah and neighboring Emirates.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                
+                <!-- Review 1 -->
+                <div class="bg-fdc-sand/70 p-6 rounded-2xl border border-slate-200 flex flex-col justify-between space-y-4">
+                    <div class="space-y-3">
+                        <div class="flex text-amber-500 text-xs gap-1">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-xs text-fdc-textMuted leading-relaxed italic">
+                            "I took my 6-year-old daughter for her first filling and was terrified she would cry. The doctor was so gentle and patient with her! Now she isn’t scared of the dentist at all."
+                        </p>
+                    </div>
+                    <div class="pt-4 border-t border-slate-200/60 flex items-center justify-between">
+                        <div>
+                            <h5 class="font-bold text-xs text-fdc-navy">Aisha Al-Nuaimi</h5>
+                            <span class="text-[10px] text-fdc-textMuted">Sharjah Resident</span>
+                        </div>
+                        <i class="fa-brands fa-google text-slate-400 text-base"></i>
+                    </div>
+                </div>
+
+                <!-- Review 2 -->
+                <div class="bg-fdc-sand/70 p-6 rounded-2xl border border-slate-200 flex flex-col justify-between space-y-4">
+                    <div class="space-y-3">
+                        <div class="flex text-amber-500 text-xs gap-1">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-xs text-fdc-textMuted leading-relaxed italic">
+                            "Got my root canal done here after suffering intense tooth pain for two days. The procedure was smooth and completely painless. Highly professional team."
+                        </p>
+                    </div>
+                    <div class="pt-4 border-t border-slate-200/60 flex items-center justify-between">
+                        <div>
+                            <h5 class="font-bold text-xs text-fdc-navy">Mohammed Tariq</h5>
+                            <span class="text-[10px] text-fdc-textMuted">Al Qasimia, Sharjah</span>
+                        </div>
+                        <i class="fa-brands fa-google text-slate-400 text-base"></i>
+                    </div>
+                </div>
+
+                <!-- Review 3 -->
+                <div class="bg-fdc-sand/70 p-6 rounded-2xl border border-slate-200 flex flex-col justify-between space-y-4">
+                    <div class="space-y-3">
+                        <div class="flex text-amber-500 text-xs gap-1">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-xs text-fdc-textMuted leading-relaxed italic">
+                            "Clean clinic, polite receptionists, and reasonable prices compared to other clinics in Sharjah. I do my routine teeth scaling here every six months."
+                        </p>
+                    </div>
+                    <div class="pt-4 border-t border-slate-200/60 flex items-center justify-between">
+                        <div>
+                            <h5 class="font-bold text-xs text-fdc-navy">Saba Khan</h5>
+                            <span class="text-[10px] text-fdc-textMuted">Al Majaz Resident</span>
+                        </div>
+                        <i class="fa-brands fa-google text-slate-400 text-base"></i>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 6: LOCATION, HOURS & APPOINTMENT REQUEST -->
+    <section id="contact" class="py-20 bg-fdc-sand/40">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+                
+                <!-- Info Column -->
+                <div class="lg:col-span-5 space-y-7">
+                    <div>
+                        <span class="text-fdc-teal text-xs font-bold uppercase tracking-widest bg-white px-3.5 py-1.5 rounded-full border border-fdc-teal/20">
+                            Visit Our Clinic
+                        </span>
+                        <h2 class="text-3xl sm:text-4xl font-heading font-bold text-fdc-navy mt-3">We’re Here for Your Family’s Dental Needs</h2>
+                        <p class="text-xs sm:text-sm text-fdc-textMuted font-light mt-1">Conveniently located in Al Qasimia, Sharjah with easy access.</p>
+                    </div>
+
+                    <div class="space-y-5 text-xs sm:text-sm">
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-xl bg-fdc-mint text-fdc-teal flex items-center justify-center shrink-0 border border-fdc-teal/20 mt-0.5">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                            <div>
+                                <strong class="text-fdc-navy block font-bold">Clinic Address</strong>
+                                <span class="text-fdc-textMuted">King Faisal Street, Al Qasimia Area, Near King Faisal Mosque, Sharjah, United Arab Emirates</span>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-xl bg-fdc-mint text-fdc-teal flex items-center justify-center shrink-0 border border-fdc-teal/20 mt-0.5">
+                                <i class="fa-solid fa-phone"></i>
+                            </div>
+                            <div>
+                                <strong class="text-fdc-navy block font-bold">Call / Appointment Line</strong>
+                                <a href="tel:+97165734444" class="text-fdc-teal hover:underline font-semibold">+971 6 573 4444</a>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-xl bg-fdc-mint text-fdc-teal flex items-center justify-center shrink-0 border border-fdc-teal/20 mt-0.5">
+                                <i class="fa-solid fa-clock"></i>
+                            </div>
+                            <div>
+                                <strong class="text-fdc-navy block font-bold">Working Hours</strong>
+                                <span class="text-fdc-textMuted block">Saturday – Thursday: 9:00 AM – 9:00 PM</span>
+                                <span class="text-fdc-textMuted block text-[11px] italic text-amber-700">Friday: Closed / Emergency On Call</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="pt-2">
+                        <a href="https://maps.google.com/?q=Family+Dental+Centre+Sharjah" target="_blank" class="inline-flex items-center gap-2 border border-fdc-navy text-fdc-navy bg-white px-6 py-3 rounded-xl font-bold text-xs uppercase tracking-wider hover:bg-fdc-navy hover:text-white transition-all shadow-sm">
+                            <i class="fa-solid fa-map-location-dot text-fdc-teal"></i>
+                            <span>Open in Google Maps</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Booking Form Column -->
+                <div class="lg:col-span-7">
+                    <form class="bg-white p-6 sm:p-8 rounded-3xl border border-slate-200 shadow-md space-y-5" onsubmit="event.preventDefault(); handleBookingSubmit();">
+                        <h3 class="text-2xl font-heading font-bold text-fdc-navy">Request a Dental Appointment</h3>
+                        <p class="text-xs text-fdc-textMuted">Fill out the form below and our receptionist will call you to confirm your exact time slot.</p>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-[11px] text-fdc-navy uppercase font-bold mb-1">Patient Name</label>
+                                <input type="text" id="patient-name" required placeholder="e.g. Fatima Al Qassimi" class="w-full px-4 py-3 rounded-xl bg-fdc-sand/50 border border-slate-200 text-xs text-fdc-navy focus:outline-none focus:border-fdc-teal">
+                            </div>
+                            <div>
+                                <label class="block text-[11px] text-fdc-navy uppercase font-bold mb-1">Phone Number</label>
+                                <input type="tel" id="patient-phone" required placeholder="+971 50 xxx xxxx" class="w-full px-4 py-3 rounded-xl bg-fdc-sand/50 border border-slate-200 text-xs text-fdc-navy focus:outline-none focus:border-fdc-teal">
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-[11px] text-fdc-navy uppercase font-bold mb-1">Requested Treatment</label>
+                                <select id="patient-service" class="w-full px-4 py-3 rounded-xl bg-fdc-sand/50 border border-slate-200 text-xs text-fdc-navy focus:outline-none focus:border-fdc-teal">
+                                    <option value="General Consultation & Checkup">General Consultation & Checkup</option>
+                                    <option value="Pediatric Kids Care">Pediatric / Kids Dental</option>
+                                    <option value="Teeth Cleaning & Scaling">Teeth Cleaning & Scaling</option>
+                                    <option value="Root Canal Treatment">Root Canal Treatment</option>
+                                    <option value="Braces / Clear Aligners">Braces or Clear Aligners</option>
+                                    <option value="Teeth Whitening">Teeth Whitening</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="block text-[11px] text-fdc-navy uppercase font-bold mb-1">Preferred Day & Time</label>
+                                <input type="text" id="patient-time" placeholder="e.g. Tomorrow around 5:00 PM" class="w-full px-4 py-3 rounded-xl bg-fdc-sand/50 border border-slate-200 text-xs text-fdc-navy focus:outline-none focus:border-fdc-teal">
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="block text-[11px] text-fdc-navy uppercase font-bold mb-1">Notes / Symptoms (Optional)</label>
+                            <textarea id="patient-notes" rows="3" placeholder="Describe any tooth pain, sensitivity, or specific preference..." class="w-full px-4 py-3 rounded-xl bg-fdc-sand/50 border border-slate-200 text-xs text-fdc-navy focus:outline-none focus:border-fdc-teal"></textarea>
+                        </div>
+
+                        <button type="submit" class="w-full py-4 rounded-xl btn-teal font-bold text-xs uppercase tracking-wider shadow-md">
+                            Submit Booking Request
+                        </button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-8 bg-fdc-navy text-slate-400 text-xs border-t border-fdc-teal/20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <span>© 2026 Family Dental Centre - Al Qasimia, Sharjah, UAE. All Rights Reserved.</span>
+            <div class="flex gap-4 text-fdc-teal font-medium">
+                <a href="tel:+97165734444" class="hover:underline"><i class="fa-solid fa-phone mr-1"></i>+971 6 573 4444</a>
+                <a href="#contact" class="hover:underline"><i class="fa-solid fa-location-dot mr-1"></i>King Faisal St, Sharjah</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Notification Modal Box -->
+    <div id="modal-box" class="fixed inset-0 z-50 bg-fdc-navy/70 backdrop-blur-sm hidden flex items-center justify-center p-4">
+        <div class="bg-white p-6 sm:p-8 rounded-3xl max-w-md w-full border border-fdc-teal/30 text-center space-y-4 shadow-2xl">
+            <div class="w-14 h-14 rounded-full bg-fdc-mint text-fdc-teal flex items-center justify-center mx-auto text-2xl border border-fdc-teal/30">
+                <i class="fa-solid fa-circle-check"></i>
+            </div>
+            <h3 class="text-2xl font-heading font-bold text-fdc-navy" id="modal-title">Request Sent</h3>
+            <p class="text-xs text-fdc-textMuted leading-relaxed" id="modal-msg">Thank you for reaching out to Family Dental Centre.</p>
+            <button onclick="closeModal()" class="w-full py-3 rounded-xl btn-teal font-bold text-xs uppercase tracking-wider">
+                Close
+            </button>
+        </div>
+    </div>
+
+    <!-- Vanilla JavaScript Logic -->
+    <script>
+        // Mobile Drawer Toggle
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Interactive Treatment Tab Switching
+        function switchTab(category) {
+            // Hide all tab panels
+            const panels = document.querySelectorAll('.tab-panel');
+            panels.forEach(panel => panel.classList.add('hidden'));
+
+            // Reset tab button styles
+            const tabBtns = document.querySelectorAll('.tab-btn');
+            tabBtns.forEach(btn => {
+                btn.classList.remove('bg-fdc-teal', 'text-white', 'border-fdc-teal', 'shadow-sm');
+                btn.classList.add('bg-white', 'text-fdc-navy', 'border-slate-200');
+            });
+
+            // Show selected panel
+            const activePanel = document.getElementById('content-' + category);
+            if (activePanel) {
+                activePanel.classList.remove('hidden');
+            }
+
+            // Highlight selected button
+            const activeBtn = document.getElementById('tab-' + category);
+            if (activeBtn) {
+                activeBtn.classList.remove('bg-white', 'text-fdc-navy', 'border-slate-200');
+                activeBtn.classList.add('bg-fdc-teal', 'text-white', 'border-fdc-teal', 'shadow-sm');
+            }
+        }
+
+        // Booking Submission Handler
+        function handleBookingSubmit() {
+            const name = document.getElementById('patient-name').value;
+            const phone = document.getElementById('patient-phone').value;
+            const service = document.getElementById('patient-service').value;
+
+            const modalTitle = document.getElementById('modal-title');
+            const modalMsg = document.getElementById('modal-msg');
+            const modalBox = document.getElementById('modal-box');
+
+            modalTitle.innerText = "Appointment Request Received!";
+            modalMsg.innerText = "Thank you " + name + ". Your request for '" + service + "' has been logged. Our Sharjah clinic desk will call you at " + phone + " shortly to confirm your time.";
+
+            modalBox.classList.remove('hidden');
+        }
+
+        function closeModal() {
+            document.getElementById('modal-box').classList.add('hidden');
+        }
+    </script>
+</body>
+</html>
